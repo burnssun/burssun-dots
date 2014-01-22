@@ -12,14 +12,15 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 ssh-agent &
-ibus-daemon -d
-VBoxClient-all &
+
+# ibus-daemon -d
 
 xset s off         # don't activate screensaver
 xset -dpms         # disable DPMS (Energy Star) features.
 xset s noblank     # don't blank the video device
 
-xrdb ~/.Xresources &
+# xrdb ~/.Xresources &
+
 exec i3
 
 # exec ~/dwm-6.0/dwm
